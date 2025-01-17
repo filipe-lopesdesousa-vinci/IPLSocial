@@ -27,3 +27,13 @@ describe("Password Checker - testing character length", () => {
         expect(result).toBe(true);
     });
 });
+
+describe("Password Checker - testing special characters", () => {
+    let passwordChecker = new PasswordChecker();
+
+    it("should return false if password does not contain special characters", () => {
+        const result = passwordChecker.testSpecialChar("password");
+
+        expect(result).toBe(false);
+    });
+});

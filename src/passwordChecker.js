@@ -5,4 +5,8 @@ export class PasswordChecker {
         }
         return true;
     }
+
+    testSpecialChar(password) {
+        return false;
+    }
 }
