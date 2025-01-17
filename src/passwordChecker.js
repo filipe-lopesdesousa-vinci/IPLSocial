@@ -20,4 +20,11 @@ export class PasswordChecker {
         
         return lowerCasePassword.includes("ipl");
     }
+
+    validatePassword(password) {
+        return this.testCharLength(password) &&
+               this.testSpecialChar(password) &&
+               this.testContainsNumber(password) &&
+               this.testContainsIPL(password);
+    }
 }

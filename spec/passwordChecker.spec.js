@@ -99,3 +99,31 @@ describe("Password Checker - testing IPL", () => {
         expect(result).toBe(true);
     });
 });
+
+describe("Password Checker - validate password", () => {
+    let passwordChecker = new PasswordChecker();
+
+    it("should return false if password does not meet all criteria", () => {
+        const result = passwordChecker.validatePassword("short1!");
+
+        expect(result).toBe(false);
+    });
+
+    it("should return true if password meets all criteria", () => {
+        const result = passwordChecker.validatePassword("Password1!IpL");
+
+        expect(result).toBe(true);
+    });
+
+    it("should return false if password is missing a special character", () => {
+        const result = passwordChecker.validatePassword("Password1IPL");
+
+        expect(result).toBe(false);
+    });
+
+    it("should return false if password is missing a number", () => {
+        const result = passwordChecker.validatePassword("Password!IPL");
+
+        expect(result).toBe(false);
+    });
+});
