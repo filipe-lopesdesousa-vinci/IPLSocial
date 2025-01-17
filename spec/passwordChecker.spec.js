@@ -74,10 +74,16 @@ describe("Password Checker - testing numbers", () => {
 
 describe("Password Checker - testing IPL", () => {
     let passwordChecker = new PasswordChecker();
-    
+
     it("should return false if password dont contains IPL", () => {
         const result = passwordChecker.testContainsIPL("password");
 
         expect(result).toBe(false);
+    });
+
+    it("should return true if password contains IPL in capital letters", () => {
+        const result = passwordChecker.testContainsIPL("passwordIPL");
+
+        expect(result).toBe(true);
     });
 });

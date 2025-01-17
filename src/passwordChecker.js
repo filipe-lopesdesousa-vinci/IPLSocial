@@ -16,6 +16,9 @@ export class PasswordChecker {
     }
 
     testContainsIPL(password) {
+        if(password.includes("IPL")){
+            return true;
+        }
         return false;
     }
 }
