@@ -86,4 +86,10 @@ describe("Password Checker - testing IPL", () => {
 
         expect(result).toBe(true);
     });
+
+    it("should return true if password contains IPL in small letters", () => {
+        const result = passwordChecker.testContainsIPL("passwordipl");
+
+        expect(result).toBe(true);
+    });
 });

@@ -16,7 +16,7 @@ export class PasswordChecker {
     }
 
     testContainsIPL(password) {
-        if(password.includes("IPL")){
+        if(password.includes("IPL") ||password.includes("ipl")){
             return true;
         }
         return false;
