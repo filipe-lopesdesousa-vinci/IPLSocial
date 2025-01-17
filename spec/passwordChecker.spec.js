@@ -49,3 +49,13 @@ describe("Password Checker - testing special characters", () => {
         expect(result).toBe(true);
     });
 });
+
+describe("Password Checker - testing numbers", () => {
+    let passwordChecker = new PasswordChecker();
+
+    it("should return false if password does not contain numbers", () => {
+        const result = passwordChecker.testContainsNumber("password");
+
+        expect(result).toBe(false);
+    });
+});

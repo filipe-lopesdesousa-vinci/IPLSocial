@@ -10,4 +10,8 @@ export class PasswordChecker {
         const specialChars = ["!", "&", "@", "#", "$", "%", "^", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "|", ";", ":", "'", "\"", "<", ">", ",", ".", "?", "/"];
         return specialChars.some(char => password.includes(char));
     }
+
+    testContainsNumber(password) { 
+        return false;
+    };
 }
