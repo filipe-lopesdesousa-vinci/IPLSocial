@@ -7,9 +7,7 @@ export class PasswordChecker {
     }
 
     testSpecialChar(password) {
-        if(password.includes("!" || "&")){
-            return true;
-        }
-        return false;
+        const specialChars = ["!", "&", "@", "#", "$", "%", "^", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "|", ";", ":", "'", "\"", "<", ">", ",", ".", "?", "/"];
+        return specialChars.some(char => password.includes(char));
     }
 }
