@@ -36,4 +36,10 @@ describe("Password Checker - testing special characters", () => {
 
         expect(result).toBe(false);
     });
+
+    it("should return true if password contains at least 1 special character", () => {
+        const result = passwordChecker.testSpecialChar("password!");
+
+        expect(result).toBe(true);
+    });
 });

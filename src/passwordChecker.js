@@ -7,6 +7,9 @@ export class PasswordChecker {
     }
 
     testSpecialChar(password) {
+        if(password.includes("!")){
+            return true;
+        }
         return false;
     }
 }
