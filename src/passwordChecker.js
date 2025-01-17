@@ -12,7 +12,7 @@ export class PasswordChecker {
     }
 
     testContainsNumber(password) {
-        if (password.includes('1')) {
+        if (password.includes('1' || '2')) {
             return true;
         }
         return false;

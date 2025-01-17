@@ -64,4 +64,10 @@ describe("Password Checker - testing numbers", () => {
 
         expect(result).toBe(true);
     });
+
+    it("should return true if password contains more than 1 number", () => {
+        const result = passwordChecker.testContainsNumber("pass1word2");
+
+        expect(result).toBe(true);
+    });
 });
