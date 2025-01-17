@@ -92,4 +92,10 @@ describe("Password Checker - testing IPL", () => {
 
         expect(result).toBe(true);
     });
+
+    it("should return true if password contains IPL in any case ", () => {
+        const result = passwordChecker.testContainsIPL("passwordIpL");
+
+        expect(result).toBe(true);
+    });
 });

@@ -16,9 +16,8 @@ export class PasswordChecker {
     }
 
     testContainsIPL(password) {
-        if(password.includes("IPL") ||password.includes("ipl")){
-            return true;
-        }
-        return false;
+        const lowerCasePassword = password.toLowerCase();
+        
+        return lowerCasePassword.includes("ipl");
     }
 }
