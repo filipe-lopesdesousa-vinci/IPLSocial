@@ -1,7 +1,7 @@
 import { PasswordChecker } from "../src/passwordChecker.js";
+let passwordChecker = new PasswordChecker();
 
 describe("Password Checker - testing character length", () => {
-    let passwordChecker = new PasswordChecker();
 
     it("should return false if password length equals 0", () => {
         const result = passwordChecker.testCharLength("");
@@ -29,7 +29,6 @@ describe("Password Checker - testing character length", () => {
 });
 
 describe("Password Checker - testing special characters", () => {
-    let passwordChecker = new PasswordChecker();
 
     it("should return false if password does not contain special characters", () => {
         const result = passwordChecker.testSpecialChar("password");
@@ -51,7 +50,6 @@ describe("Password Checker - testing special characters", () => {
 });
 
 describe("Password Checker - testing numbers", () => {
-    let passwordChecker = new PasswordChecker();
 
     it("should return false if password does not contain numbers", () => {
         const result = passwordChecker.testContainsNumber("password");
@@ -73,7 +71,6 @@ describe("Password Checker - testing numbers", () => {
 });
 
 describe("Password Checker - testing IPL", () => {
-    let passwordChecker = new PasswordChecker();
 
     it("should return false if password dont contains IPL", () => {
         const result = passwordChecker.testContainsIPL("password");
@@ -101,7 +98,6 @@ describe("Password Checker - testing IPL", () => {
 });
 
 describe("Password Checker - validate password", () => {
-    let passwordChecker = new PasswordChecker();
 
     it("should return false if password does not meet all criteria", () => {
         const result = passwordChecker.validatePassword("short1!");
