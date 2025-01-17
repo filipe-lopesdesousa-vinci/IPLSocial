@@ -14,4 +14,10 @@ describe("Password Checker - testing character length", () => {
 
         expect(result).toBe(false);
     });
+
+    it("should return true if password length equals 8", () => {    
+        const result = passwordChecker.testCharLength("12345678");
+
+        expect(result).toBe(true);
+    });
 });
