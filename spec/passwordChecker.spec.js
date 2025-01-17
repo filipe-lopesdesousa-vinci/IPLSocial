@@ -58,4 +58,10 @@ describe("Password Checker - testing numbers", () => {
 
         expect(result).toBe(false);
     });
+
+    it("should return true if password contains at least 1 number", () => {
+        const result = passwordChecker.testContainsNumber("password1");
+
+        expect(result).toBe(true);
+    });
 });

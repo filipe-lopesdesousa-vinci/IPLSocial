@@ -11,7 +11,10 @@ export class PasswordChecker {
         return specialChars.some(char => password.includes(char));
     }
 
-    testContainsNumber(password) { 
+    testContainsNumber(password) {
+        if (password.includes('1')) {
+            return true;
+        }
         return false;
-    };
+    }
 }
