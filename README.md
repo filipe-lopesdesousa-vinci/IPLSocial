@@ -43,3 +43,6 @@ npm run test
 ```
 
 ## Explication du code
+
+Pour tester la validation d'un mot de passe, j'ai tester les differentes conditions une par une dans des branches séparées. J'ai commencer par tester la longueur du mot de passe, ensuite la presence de characteres speciaux, ensuite la presence d'un nombre et finalement la presence de la chaine de charactere IPL peut importe la casse.
+J'ai finalement tout regroupé dans une fonction qui fait appel aux differentes donctions séparemment.
