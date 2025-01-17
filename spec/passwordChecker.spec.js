@@ -20,4 +20,10 @@ describe("Password Checker - testing character length", () => {
 
         expect(result).toBe(true);
     });
+
+    it("should return true if password length is greater than 8", () => {
+        const result = passwordChecker.testCharLength("123456789");
+
+        expect(result).toBe(true);
+    });
 });

@@ -1,6 +1,6 @@
 export class PasswordChecker {
     testCharLength(password) {
-        if(password.length === 8) {
+        if(password.length === 8 || password.length > 8) {
             return true;
         }
         return false;
