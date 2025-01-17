@@ -14,4 +14,8 @@ export class PasswordChecker {
     testContainsNumber(password) {
         return /\d/.test(password);
     }
+
+    testContainsIPL(password) {
+        return false;
+    }
 }
